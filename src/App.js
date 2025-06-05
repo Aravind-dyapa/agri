@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import NavBar from './components/NavBar';
+import PrivateRoute from './components/PrivateRoute';
+import Products from './pages/Products';
+import Blogs from './pages/Blogs';
+import Markets from './pages/Markets';
+import CropPrices from './pages/CropPrices';
+import Weather from './pages/Weather';
+import DemandForecast from "./pages/DemandForecast";
+import CropSuggestion from './pages/CropSuggestion';
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route
+          path="/"
+          element={
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
+          }
+        />
+        <Route path="/products" element={<Products />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/markets" element={<Markets />} />
+        <Route path="/crop-prices" element={<CropPrices />} />
+        <Route path="/weather" element={<Weather />} />
+        <Route path="/demand" element={<DemandForecast />} />
+        <Route path="/suggestion" element={<CropSuggestion />} />
+
+
+
+
+      </Routes>
+    </>
   );
 }
 
