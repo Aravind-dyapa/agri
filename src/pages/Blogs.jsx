@@ -15,13 +15,13 @@ const blogPosts = {
   en: [
     {
       id: 1,
-      title: 'How to Improve Soil Health',
+      title: 'How to Improve Soil Health?',
       content:
         'Healthy soil leads to better crop yield. Use crop rotation, composting, and minimal tillage for maintaining soil nutrients.',
     },
     {
       id: 2,
-      title: 'Organic Pest Control Methods',
+      title: 'Organic Pest Control Methods!',
       content:
         'Natural predators like ladybugs and neem oil help control pests without harmful chemicals.',
     },

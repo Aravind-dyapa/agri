@@ -37,7 +37,7 @@ export default function CropPrices() {
           Wheat: 2100,
           Maize: 1900,
           Sugarcane: 3300,
-          Cotton: 4600,
+          Cotton: 4500,
         },
         'Andhra Pradesh': {
           Rice: 2150,
